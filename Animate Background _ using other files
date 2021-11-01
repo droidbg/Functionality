@@ -1,0 +1,14 @@
+    public void startBackgroundAnimate(){
+        ConstraintLayout constraintLayout = findViewById(R.id.conslayout);
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
+    }
+    
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        startBackgroundAnimate();
+}
